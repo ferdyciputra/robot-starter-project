@@ -13,5 +13,5 @@
 .factorypath
 .project
 .vscode/
-
 Results/
+__pycache__/
