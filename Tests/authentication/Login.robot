@@ -36,4 +36,3 @@ User Login without filled username
     And User click button login
     Then User can see error message on field username        Required
     Close Browser
-    Close Browser
