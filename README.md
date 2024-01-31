@@ -31,7 +31,7 @@ We write a resources file in the `Resources` directory.
 ### Running Tests
 1. Execute the specific sample test:
    ```bash
-   python -m robot -d results Tests/Authentication/Logout.robot
+   python -m robot -d Results Tests/Authentication/Logout.robot
    
 2. Execute the all sample test:
    ```bash

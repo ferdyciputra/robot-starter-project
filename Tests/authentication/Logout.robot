@@ -11,7 +11,8 @@ ${IMPLICIT_WAIT_IN_SECOND}    20
 *** Test Cases ***
 User logs out successfully
     [Tags]  positive
-    User already in Dashboard Page
-    User clicks on the user dropdown
-    User clicks on the logout button
-    User should be redirected to the login page
+    Given User already in Dashboard Page
+    When User clicks on the user dropdown
+    And User clicks on the logout button
+    Then User should be redirected to the login page
+    Close Browser
