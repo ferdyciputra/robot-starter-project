@@ -13,5 +13,7 @@ ${IMPLICIT_WAIT_IN_SECOND}    20
 
 *** Keywords ***
 Setup WebDriver
+    Set Selenium Implicit Wait    ${IMPLICIT_WAIT_IN_SECOND}
     ${webdriver_path} =     GetWebDriver.Get Webdriver Path    ${BROWSER}
     Open Browser     browser=${BROWSER}    executable_path=${webdriver_path}
+    Maximize Browser Window

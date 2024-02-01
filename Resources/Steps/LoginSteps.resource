@@ -1,16 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library     ../GetWebDriver.py
 Resource    ../Base.resource
 Resource    ../PageObjects/LoginPage.resource
 Resource    ../PageObjects/DashboardPage.resource
 
 *** Keywords ***
 User is on Login Page
-    Set Selenium Implicit Wait    ${IMPLICIT_WAIT_IN_SECOND}
-    Setup WebDriver
     Go To    ${HOST}
-    Maximize Browser Window
 
 User type valid username
     Input Text    	${selector_input_username}    ${valid_username}
@@ -34,10 +30,10 @@ User can see error message
     [Arguments]     @{expectedMessage}
     Element Text Should Be    ${selector_error_message}    @{expectedMessage}
 
-User can see error message on field password
+User can see on field password with error message
     [Arguments]     @{expectedMessage}
     Element Text Should Be    ${selector_error_message_input_password}    @{expectedMessage}
 
-User can see error message on field username
+User can see on field username with error message
     [Arguments]     @{expectedMessage}
     Element Text Should Be    ${selector_error_message_input_username}    @{expectedMessage}
