@@ -7,7 +7,7 @@ ${valid_username}     Admin
 ${valid_password}     admin123
 ${invalid_username}     invalid_username_value
 ${invalid_password}     invalid_password_value
-${HOST}     https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${HOST}     https://opensource-demo.orangehrmlive.com/web/index.php
 ${BROWSER}    Chrome
 ${IMPLICIT_WAIT_IN_SECOND}    20
 

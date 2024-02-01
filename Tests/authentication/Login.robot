@@ -19,18 +19,18 @@ User Login with invalid username and password
     When User type invalid username
     And User type invalid password
     And User click button login
-    Then User can see error message     Invalid credentials
+    Then User can see error message "Invalid credentials"
 
 User Login without filled password
     [Tags]  negative
     Given User is on Login Page
     When User type valid username
     And User click button login
-    Then User can see on field password with error message       Required
+    Then User can see error message "Required" on field password
 
 User Login without filled username
     [Tags]  negative
     Given User is on Login Page
     When User type valid password
     And User click button login
-    Then User can see on field username with error message      Required
+    Then User can see error message "Required" on field username

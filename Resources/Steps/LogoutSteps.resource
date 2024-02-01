@@ -1,20 +1,22 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    LoginSteps.resource
+Resource    ../Base.resource
+Resource    ../PageObjects/LoginPage.resource
+Resource    ../PageObjects/DashboardPage.resource
 
 *** Keywords ***
 User already in Dashboard Page
-    User is on Login Page
-    User type valid username
-    User type valid password
-    User click button login
-    User successfully login and can see dashboard menu
+    LoginPage.openUrl
+    LoginPage.inputUsername "${valid_username}"
+    LoginPage.inputPassword "${valid_password}"
+    LoginPage.clickButtonLogin
+    DashboardPage.isMainMenuItemDisplayed
 
 User clicks on the user dropdown
-    Click Element    ${selector_user_dropdown}
+    DashboardPage.clickUserDropdown
 
 User clicks on the logout button
-    Click Element    ${selector_user_dropdown_logout}
+    DashboardPage.clickButtonLogout
 
 User should be redirected to the login page
-    Location Should Be    ${HOST}
+    Location Should Be    ${URL_LOGIN_PAGE}
