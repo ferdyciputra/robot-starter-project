@@ -15,7 +15,7 @@ Welcome to the Robot Framework Starter Project! 🚀 This project is designed to
 
 2. Navigate to the project directory:
    ```bash
-   cd robot-starter-project
+   cd robot-starter-project-web
 
 3. Install dependencies:
    ```bash
