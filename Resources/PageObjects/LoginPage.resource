@@ -16,7 +16,7 @@ openUrl
     Go To    ${URL_LOGIN_PAGE}
 
 inputUsername "${valueUsername}"
-    Input Text    	${selector_input_username}    ${valid_username}
+    Input Text    	${selector_input_username}    ${valueUsername}
 
 inputPassword "${valuePassword}"
     Input Text    ${selector_input_password}    ${valuePassword}
